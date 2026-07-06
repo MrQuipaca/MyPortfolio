@@ -1,7 +1,4 @@
-// =========================
 // TYPING EFFECT
-// =========================
-
 const words = [
     "Front-End Developer",
     "Web Developer",
@@ -73,10 +70,8 @@ function typeEffect(){
 typeEffect();
 
 
-// =========================
-// NAVBAR SCROLL EFFECT
-// =========================
 
+// NAVBAR SCROLL EFFECT
 const nav =
 document.querySelector(
 "nav"
@@ -108,10 +103,8 @@ nav.style.boxShadow =
 });
 
 
-// =========================
-// REVEAL ANIMATION
-// =========================
 
+// REVEAL ANIMATION
 const observer =
 new IntersectionObserver(
 
@@ -173,10 +166,8 @@ observer.observe(el);
 );
 
 
-// =========================
-// ACTIVE NAV LINKS
-// =========================
 
+// ACTIVE NAV LINKS
 const sections =
 document.querySelectorAll(
 "section"
@@ -243,10 +234,8 @@ link.classList.add(
 });
 
 
-// =========================
-// COUNTER ANIMATION
-// =========================
 
+// COUNTER ANIMATION
 const counters =
 document.querySelectorAll(
 ".stat-card h3"
@@ -304,10 +293,8 @@ update();
 );
 
 
-// =========================
-// PROJECT CARD TILT
-// =========================
 
+// PROJECT CARD TILT
 document.querySelectorAll(
 ".project-card"
 )
@@ -376,9 +363,8 @@ scale(1)
 );
 
 
-// =========================
+
 // CONTACT FORM
-// =========================
 
 const form =
 document.querySelector(
@@ -408,10 +394,8 @@ form.reset();
 }
 
 
-// =========================
-// MOUSE GLOW
-// =========================
 
+// MOUSE GLOW
 const glow =
 document.createElement(
 "div"
@@ -441,10 +425,8 @@ e.clientY + "px";
 );
 
 
-// =========================
-// FLOATING STARS
-// =========================
 
+// FLOATING STARS
 for(
 let i=0;
 i<35;
@@ -531,3 +513,15 @@ expanded ?
 }
 
 );
+
+// Send Email
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(function() {
+      alert("Message sent successfully!");
+    }, function(error) {
+      alert("Failed to send message: " + JSON.stringify(error));
+    });
+});

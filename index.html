@@ -28,46 +28,47 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#">
+                <a href="#home">
                     Home
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#about">
                     About
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#skills">
                     Skills
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#projects">
                     Projects
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#journey">
                     Journey
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#contact">
                     Contact
                 </a>
             </li>
         </ul>
-        <a href="#" class="cv-btn">
+        <a href="https://drive.google.com/file/d/1k4eZ6ftZVeMLcSpy4HpIDl6wLPeT3CeP/view?usp=drive_link" class="cv-btn"
+            target="_blank">
             Download CV
         </a>
     </nav>
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="home">
         <!-- LEFT : IMAGE -->
         <div class="hero-right">
             <div class="circle">
-                <img src="image/mr quipaca.jpg" alt="Mr Quipaca">
+                <img src="image/mr-quipaca.jpg" alt="Mr Quipaca">
             </div>
             <div class="profile-card">
             </div>
@@ -116,20 +117,31 @@ stack:
                 <a href="#view" class="project-btn">
                     View Projects
                 </a>
-                <a href="#" class="download-btn">
+
+                <!-- <a href="#" class="download-btn">
                     Download CV
+                </a> -->
+
+                <a href="http://wa.me/918523089576" class="download-btn" target="_blank">
+                    WhatsApp 
+                    <i class="fa-brands fa-whatsapp"></i>
                 </a>
+
+
             </div>
             <div class="social">
-                <a href="#">
+                <!-- 1. Github -->
+                <a href="https://github.com/MrQuipaca" target="_blank">
                     <i class="fa-brands fa-github">
                     </i>
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank">
+                    <!-- 2. LinkdIn -->
                     <i class="fa-brands fa-linkedin-in">
                     </i>
                 </a>
-                <a href="#">
+                <a href="mailto:domikipas@gmail.com" target="_blank">
+                    <!-- 3. Email -->
                     <i class="fa-regular fa-envelope">
                     </i>
                 </a>
@@ -137,7 +149,7 @@ stack:
         </div>
     </section>
     <!-- ABOUT -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-title">
             <span>
                 ABOUT ME
@@ -230,8 +242,9 @@ stack:
             </div>
         </div>
     </section>
+
     <!-- Skills -->
-    <section class="skills">
+    <section class="skills" id="skills">
         <!-- progress bar -->
         <div class="progress-fill html" data-width="95%"></div>
         <div class="progress-fill css" data-width="90%"></div>
@@ -310,6 +323,7 @@ stack:
                     </div>
                 </div>
             </div>
+
             <!-- LIBRARIES -->
             <div class="skill-card">
                 <div class="skill-header">
@@ -445,9 +459,11 @@ stack:
         </div>
     </section>
     <!-- Skills-END -->
+
+
     <!-- Projets -->
     <!-- PROJECTS -->
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="projects-head">
             <div>
                 <span>
@@ -731,9 +747,10 @@ stack:
         </div>
     </section>
     <!-- Projets-END -->
-    <!-- Journey -->
+
+    
     <!-- JOURNEY -->
-    <section class="journey">
+    <section class="journey" id="journey">
         <div class="journey-title">
             <span>
                 MY JOURNEY
@@ -839,9 +856,10 @@ stack:
         </div>
     </section>
     <!-- Journey-END -->
-    <!-- Contact -->
+
+    
     <!-- CONTACT -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-title">
             <span>
                 GET IN TOUCH
@@ -901,19 +919,23 @@ stack:
                     </div>
                 </div>
                 <div class="contact-social">
-                    <a href="#">
+                    <a href="https://github.com/MrQuipaca" target="_blank">
+                        <!-- Github -->
                         <i class="fa-brands fa-github">
                         </i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank">
+                        <!-- LinkedIn -->
                         <i class="fa-brands fa-linkedin">
                         </i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/mr.quipaca/" target="_blank">
+                        <!-- Instagram -->
                         <i class="fa-brands fa-instagram">
                         </i>
                     </a>
-                    <a href="#">
+                    <a href="mailto:domikipas@gmail.com">
+                        <!-- Email -->
                         <i class="fa-regular fa-envelope">
                         </i>
                     </a>
@@ -922,7 +944,7 @@ stack:
 
             <!-- RIGHT -->
             <div class="contact-form">
-                <form action="mailto:domikipas@gmail.com" method="post" enctypt="text/plain">
+                <form id="contact form">
                     <div class="input-box">
                         <input type="text" placeholder="Your Name" required>
                     </div>
@@ -946,6 +968,7 @@ stack:
         </div>
     </section>
     <!-- Contact-END -->
+
     <!-- JavaScript -->
     <script src="script.js">
     </script>
