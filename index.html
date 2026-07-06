@@ -4,19 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Domingos Quipaca |
-        Portfolio
-    </title>
+    <title>Domingos Quipaca | Portfolio</title>
 
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-<!-- FAVICON END-->
+    <!-- FAVICON END-->
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,513 +22,257 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <JS-Contact-Form>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-            (function () {
-                emailjs.init("4fvujRhDfIWf62N4M"); // My Public key from EmailJS
-            })();
-        </script>
-    </JS-Contact-Form>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("4fvujRhDfIWf62N4M"); // My Public key from EmailJS
+        })();
+    </script>
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav>
         <div class="logo">
-            <span>
-                DQ
-            </span>
+            <span>DQ</span>
             Domingos Quipaca
         </div>
-        <ul class="nav-links">
-            <li>
-                <a href="#home">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    About
-                </a>
-            </li>
-            <li>
-                <a href="#skills">
-                    Skills
-                </a>
-            </li>
-            <li>
-                <a href="#projects">
-                    Projects
-                </a>
-            </li>
-            <li>
-                <a href="#journey">
-                    Journey
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                    Contact
-                </a>
-            </li>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="https://drive.google.com/file/d/1k4eZ6ftZVeMLcSpy4HpIDl6wLPeT3CeP/view?usp=drive_link" class="cv-btn"
             target="_blank">
             Download CV
         </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
+
     <!-- HERO -->
     <section class="hero" id="home">
-        <!-- LEFT : IMAGE -->
+        <!-- RIGHT : IMAGE -->
         <div class="hero-right">
             <div class="circle">
                 <img src="image/mr-quipaca.jpg" alt="Mr Quipaca">
             </div>
-            <div class="profile-card">
-            </div>
             <div class="code-box">
-                <div class="code-icon">
-                    &lt;/&gt;
-                </div>
+                <div class="code-icon">&lt;/&gt;</div>
                 <pre>
 const developer = {
-role:
-"Front-End",
-stack:
-"HTML CSS JS",
+role: "Front-End",
+stack: "HTML CSS JS",
 }
 </pre>
             </div>
-            <div class="tech-tag">
-                HTML • CSS • JS
-            </div>
+            <div class="tech-tag">HTML • CSS • JS</div>
         </div>
-        <!-- RIGHT : TEXT -->
+        <!-- LEFT : TEXT -->
         <div class="hero-left">
-            <div class="hello">
-                Hello, I'm
-            </div>
-            <h1>
-                Mr.
-                <br>
-                <span>
-                    Quipaca
-                </span>
-            </h1>
+            <div class="hello">Hello, I'm</div>
+            <h1>Mr. <br><span>Quipaca</span></h1>
             <div class="designation">
-                Junior
-                <span id="typing">
-                    Front-End Developer
-                </span>
+                Junior <span id="typing">Front-End Developer</span>
             </div>
-            <p>
-                I build responsive,
-                modern and
-                user-focused
-                web experiences.
-            </p>
+            <p>I build responsive, modern and user-focused web experiences.</p>
             <div class="buttons">
-                <a href="#view" class="project-btn">
-                    View Projects
-                </a>
-
-                <!-- <a href="#" class="download-btn">
-                    Download CV
-                </a> -->
-
+                <a href="#view" class="project-btn">View Projects</a>
                 <a href="http://wa.me/918523089576" class="download-btn" target="_blank">
-                    WhatsApp
-                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp <i class="fa-brands fa-whatsapp"></i>
                 </a>
-
-
             </div>
             <div class="social">
-                <!-- 1. Github -->
-                <a href="https://github.com/MrQuipaca" target="_blank">
-                    <i class="fa-brands fa-github">
-                    </i>
-                </a>
-                <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank">
-                    <!-- 2. LinkdIn -->
-                    <i class="fa-brands fa-linkedin-in">
-                    </i>
-                </a>
-                <a href="mailto:domikipas@gmail.com" target="_blank">
-                    <!-- 3. Email -->
-                    <i class="fa-regular fa-envelope">
-                    </i>
-                </a>
+                <a href="https://github.com/MrQuipaca" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:domikipas@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
             </div>
         </div>
     </section>
+
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="about-title">
-            <span>
-                ABOUT ME
-            </span>
-            <h2>
-                Who Am I?
-            </h2>
+            <span>ABOUT ME</span>
+            <h2>Who Am I?</h2>
         </div>
         <div class="about-container">
             <!-- LEFT -->
-            <div class="about-left">
+            <div class="about-left" style="margin-top: -2rem" ;>
                 <p>
-                    Junior Front-End Developer with
-                    experience in HTML, CSS,
-                    JavaScript and responsive
-                    design.
-                    I enjoy creating modern,
-                    clean and user-friendly
-                    web experiences.
+                    Junior Front-End Developer with experience in HTML, CSS, JavaScript and responsive design.
+                    I enjoy creating modern, clean and user-friendly web experiences.
+                    Currently studying React and Node.js, with a future goal of becoming a Full-Stack Web Developer
+                    and AI Agent Builder.
                 </p>
-                <p>
-                    I have a passion for
-                    building digital products
-                    that combine aesthetics
-                    and functionality.
-                </p>
+
+                <p>I have a passion for building digital products that combine aesthetics and functionality.</p>
                 <div class="about-info">
-                    <div>
-                        <i class="fa-solid fa-location-dot">
-                        </i>
-                        Visakhapatnam,
-                        Andhra Pradesh,
-                        India
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-envelope">
-                        </i>
-                        domikipas@gmail.com
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-phone">
-                        </i>
-                        +91 85230 89576
-                    </div>
+                    <div><i class="fa-solid fa-location-dot"></i> Visakhapatnam, Andhra Pradesh, India</div>
+                    <div><i class="fa-regular fa-envelope"></i> domikipas@gmail.com</div>
+                    <div><i class="fa-solid fa-phone"></i> +91 85230 89576</div>
                 </div>
             </div>
             <!-- RIGHT -->
             <div class="about-right">
                 <div class="stat-card">
-                    <i class="fa-regular fa-folder-open">
-                    </i>
-                    <h3>
-                        15+
-                    </h3>
-                    <p>
-                        Projects
-                        Completed
-                    </p>
+                    <i class="fa-regular fa-folder-open"></i>
+                    <h3>15+</h3>
+                    <p>Projects Completed</p>
                 </div>
                 <div class="stat-card">
-                    <i class="fa-solid fa-code">
-                    </i>
-                    <h3>
-                        10+
-                    </h3>
-                    <p>
-                        Technologies
-                    </p>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>10+</h3>
+                    <p>Technologies</p>
                 </div>
                 <div class="stat-card">
-                    <i class="fa-solid fa-graduation-cap">
-                    </i>
-                    <h3>
-                        3+
-                    </h3>
-                    <p>
-                        Years Teaching
-                    </p>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>3+</h3>
+                    <p>Years Teaching</p>
                 </div>
                 <div class="stat-card">
-                    <i class="fa-solid fa-globe">
-                    </i>
-                    <h3>
-                        2
-                    </h3>
-                    <p>
-                        Languages
-                    </p>
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>2</h3>
+                    <p>Languages</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- SKILLS -->
     <section class="skills" id="skills">
-        <!-- progress bar -->
-        <div class="progress-fill html" data-width="95%"></div>
-        <div class="progress-fill css" data-width="90%"></div>
-        <div class="progress-fill js" data-width="80%"></div>
-        <span>
-            MY SKILLS
-        </span>
-        <h2>
-            Technologies & Tools
-        </h2>
+        <div class="skills-title">
+            <span>MY SKILLS</span>
+            <h2>Technologies & Tools</h2>
         </div>
         <div class="skills-grid">
             <!-- FRONTEND -->
             <div class="skill-card">
                 <div class="skill-header">
-                    <i class="fa-solid fa-code">
-                    </i>
-                    <h3>
-                        Frontend Development
-                    </h3>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Frontend Development</h3>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            HTML5
-                        </span>
-                        <span>
-                            95%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>HTML5</span><span>95%</span></div>
                     <div class="progress">
-                        <div class="progress-fill html">
-                        </div>
+                        <div class="progress-fill html"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            CSS3
-                        </span>
-                        <span>
-                            90%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>CSS3</span><span>90%</span></div>
                     <div class="progress">
-                        <div class="progress-fill css">
-                        </div>
+                        <div class="progress-fill css"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            JavaScript
-                        </span>
-                        <span>
-                            80%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>JavaScript</span><span>80%</span></div>
                     <div class="progress">
-                        <div class="progress-fill js">
-                        </div>
+                        <div class="progress-fill js"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            Responsive Design
-                        </span>
-                        <span>
-                            92%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>Responsive Design</span><span>92%</span></div>
                     <div class="progress">
-                        <div class="progress-fill responsive">
-                        </div>
+                        <div class="progress-fill responsive"></div>
                     </div>
                 </div>
             </div>
-
             <!-- LIBRARIES -->
             <div class="skill-card">
                 <div class="skill-header">
-                    <i class="fa-brands fa-js">
-                    </i>
-                    <h3>
-                        JavaScript & React
-                    </h3>
+                    <i class="fa-brands fa-js"></i>
+                    <h3>JavaScript & React</h3>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            ES6
-                        </span>
-                        <span>
-                            80%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>ES6</span><span>80%</span></div>
                     <div class="progress">
-                        <div class="progress-fill es6">
-                        </div>
+                        <div class="progress-fill es6"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            DOM
-                        </span>
-                        <span>
-                            75%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>DOM</span><span>75%</span></div>
                     <div class="progress">
-                        <div class="progress-fill dom">
-                        </div>
+                        <div class="progress-fill dom"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            Interactivity
-                        </span>
-                        <span>
-                            78%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>Interactivity</span><span>78%</span></div>
                     <div class="progress">
-                        <div class="progress-fill interactive">
-                        </div>
+                        <div class="progress-fill interactive"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            React
-                        </span>
-                        <span>
-                            65%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>React</span><span>65%</span></div>
                     <div class="progress">
-                        <div class="progress-fill react">
-                        </div>
+                        <div class="progress-fill react"></div>
                     </div>
                 </div>
             </div>
             <!-- TOOLS -->
             <div class="skill-card">
                 <div class="skill-header">
-                    <i class="fa-solid fa-screwdriver-wrench">
-                    </i>
-                    <h3>
-                        Tools & Platforms
-                    </h3>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Tools & Platforms</h3>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            Git & GitHub
-                        </span>
-                        <span>
-                            85%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>Git & GitHub</span><span>85%</span></div>
                     <div class="progress">
-                        <div class="progress-fill git">
-                        </div>
+                        <div class="progress-fill git"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            Firebase
-                        </span>
-                        <span>
-                            75%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>Firebase</span><span>75%</span></div>
                     <div class="progress">
-                        <div class="progress-fill firebase">
-                        </div>
+                        <div class="progress-fill firebase"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            Netlify
-                        </span>
-                        <span>
-                            80%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>Netlify</span><span>80%</span></div>
                     <div class="progress">
-                        <div class="progress-fill netlify">
-                        </div>
+                        <div class="progress-fill netlify"></div>
                     </div>
                 </div>
                 <div class="skill-item">
-                    <div class="skill-top">
-                        <span>
-                            VS Code
-                        </span>
-                        <span>
-                            90%
-                        </span>
-                    </div>
+                    <div class="skill-top"><span>VS Code</span><span>90%</span></div>
                     <div class="progress">
-                        <div class="progress-fill vscode">
-                        </div>
+                        <div class="progress-fill vscode"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Skills-END -->
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
         <div class="projects-head">
             <div>
-                <span>
-                    MY WORK
-                </span>
-                <h2>
-                    Featured Projects
-                </h2>
+                <span>MY WORK</span>
+                <h2>Featured Projects</h2>
             </div>
             <button class="view-projects" id="viewAllBtn">
-                View All
-                <i class="fa-solid fa-arrow-right">
-                </i>
+                View All <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
         <div class="projects-grid" id="view">
-
             <!-- PROJECT 1 -->
             <div class="project-card">
                 <div class="project-image">
                     <img src="image/translator.png" alt="Translator">
                     <div class="overlay">
-                        <a href="https://lang-translator-by-mr-quipaca2026.netlify.app/" target="_blank">
-                            <i class="fa-solid fa-eye">
-                            </i>
-                        </a>
-                        <a href="#" target="_blank">
-                            <i class="fa-brands fa-github">
-                            </i>
-                        </a>
+                        <a href="https://lang-translator-by-mr-quipaca2026.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-eye"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-content">
-                    <h3>
-                        Language Translator
-                    </h3>
-                    <p>
-                        Translation app using
-                        JavaScript APIs.
-                    </p>
-                    <div class="tech-stack">
-                        <span>
-                            HTML
-                        </span>
-                        <span>
-                            CSS
-                        </span>
-                        <span>
-                            API
-                        </span>
-                    </div>
+                    <h3>Language Translator</h3>
+                    <p>Translation app using JavaScript APIs.</p>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>API</span></div>
                 </div>
             </div>
             <!-- PROJECT 2 -->
@@ -540,34 +280,15 @@ stack:
                 <div class="project-image">
                     <img src="image/smart-home.jpeg" alt="Dashboard">
                     <div class="overlay">
-                        <a href="https://smart-home-99e679.netlify.app/" target="_blank">
-                            <i class="fa-solid fa-eye">
-                            </i>
-                        </a>
-                        <a href="#" target="_blank">
-                            <i class="fa-brands fa-github">
-                            </i>
-                        </a>
+                        <a href="https://smart-home-99e679.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-eye"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-content">
-                    <h3>
-                        Smart Home Control
-                    </h3>
-                    <p>
-                        Simulation of a Smart Home Control.
-                    </p>
-                    <div class="tech-stack">
-                        <span>
-                            HTML
-                        </span>
-                        <span>
-                            CSS
-                        </span>
-                        <span>
-                            JS
-                        </span>
-                    </div>
+                    <h3>Smart Home Control</h3>
+                    <p>Simulation of a Smart Home Control.</p>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
                 </div>
             </div>
             <!-- PROJECT 3 -->
@@ -575,35 +296,14 @@ stack:
                 <div class="project-image">
                     <img src="image/facebump.jpeg" alt="Game">
                     <div class="overlay">
-                        <a href="https://facebumptbo.netlify.app/" target="_blank">
-                            <i class="fa-solid fa-eye">
-                            </i>
-                        </a>
-                        <a href="#" target="_blank">
-                            <i class="fa-brands fa-github">
-                            </i>
-                        </a>
+                        <a href="https://facebumptbo.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-content">
-                    <h3>
-                        Face Bump Game
-                    </h3>
-                    <p>
-                        Interactive browser
-                        game with animations.
-                    </p>
-                    <div class="tech-stack">
-                        <span>
-                            HTML
-                        </span>
-                        <span>
-                            CSS
-                        </span>
-                        <span>
-                            JS
-                        </span>
-                    </div>
+                    <h3>Face Bump Game</h3>
+                    <p>Interactive browser game with animations.</p>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
                 </div>
             </div>
             <!-- PROJECT 4 -->
@@ -611,275 +311,186 @@ stack:
                 <div class="project-image">
                     <img src="image/netflix.png" alt="Netflix Clone">
                     <div class="overlay">
-                        <a href="https://net-horse-84b0a.netlify.app/" target="_blank">
-                            <i class="fa-solid fa-eye">
-                            </i>
-                        </a>
-                        <a href="#" target="_blank">
-                            <i class="fa-brands fa-github">
-                            </i>
-                        </a>
+                        <a href="https://net-horse-84b0a.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-eye"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
                 <div class="project-content">
-                    <h3>
-                        Netflix Clone
-                    </h3>
-                    <p>
-                        Responsive movie
-                        streaming UI inspired
-                        by Netflix.
-                    </p>
-                    <div class="tech-stack">
-                        <span>
-                            HTML
-                        </span>
-                        <span>
-                            CSS
-                        </span>
-                        <span>
-                            JS
-                        </span>
-                    </div>
+                    <h3>Netflix Clone</h3>
+                    <p>Responsive movie streaming UI inspired by Netflix.</p>
+                    <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
                 </div>
             </div>
-
-
+        </div>
     </section>
-
-    </div>
-    <!-- Projets-END -->
-
 
     <!-- JOURNEY -->
     <section class="journey" id="journey">
         <div class="journey-title">
-            <span>
-                MY JOURNEY
-            </span>
-            <h2>
-                Education & Experience
-            </h2>
+            <span>MY JOURNEY</span>
+            <h2>Education & Experience</h2>
         </div>
         <div class="timeline">
             <!-- ITEM 1 -->
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <i class="fa-solid fa-graduation-cap">
-                    </i>
-                </div>
+                <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
                 <div class="timeline-content">
-                    <span class="year">
-                        2022 - Present
-                    </span>
-                    <h3>
-                        B.Tech Computer Science
-                    </h3>
-                    <h4>
-                        Andhra University
-                    </h4>
-                    <p>
-                        Studying computer science,
-                        software development,
-                        web technologies and
-                        problem solving.
-                    </p>
+                    <span class="year">2022 - Present</span>
+                    <h3>B.Tech Computer Science</h3>
+                    <h4>Andhra University</h4>
+                    <p>Studying computer science, software development, web technologies and problem solving.</p>
                 </div>
             </div>
             <!-- ITEM 2 -->
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <i class="fa-solid fa-code">
-                    </i>
-                </div>
+                <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
                 <div class="timeline-content">
-                    <span class="year">
-                        2023
-                    </span>
-                    <h3>
-                        Front-End Development
-                    </h3>
-                    <h4>
-                        Self Learning Journey
-                    </h4>
-                    <p>
-                        Focused on HTML, CSS,
-                        JavaScript and building
-                        responsive interfaces.
-                    </p>
+                    <span class="year">2023</span>
+                    <h3>Front-End Development</h3>
+                    <h4>Self Learning Journey</h4>
+                    <p>Focused on HTML, CSS, JavaScript and building responsive interfaces.</p>
                 </div>
             </div>
             <!-- ITEM 3 -->
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <i class="fa-solid fa-laptop-code">
-                    </i>
-                </div>
+                <div class="timeline-dot"><i class="fa-solid fa-laptop-code"></i></div>
                 <div class="timeline-content">
-                    <span class="year">
-                        2024
-                    </span>
-                    <h3>
-                        Portfolio & Projects
-                    </h3>
-                    <h4>
-                        Personal Development
-                    </h4>
-                    <p>
-                        Built portfolio websites,
-                        interactive applications
-                        and UI projects.
-                    </p>
+                    <span class="year">2024</span>
+                    <h3>Portfolio & Projects</h3>
+                    <h4>Personal Development</h4>
+                    <p>Built portfolio websites, interactive applications and UI projects.</p>
                 </div>
             </div>
             <!-- ITEM 4 -->
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <i class="fa-solid fa-rocket">
-                    </i>
-                </div>
+                <div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
                 <div class="timeline-content">
-                    <span class="year">
-                        Future Goal
-                    </span>
-                    <h3>
-                        Full Stack Developer
-                    </h3>
-                    <h4>
-                        Career Objective
-                    </h4>
-                    <p>
-                        Expand into backend
-                        development and create
-                        scalable web applications.
-                    </p>
+                    <span class="year">Future Goal</span>
+                    <h3>Full Stack Developer</h3>
+                    <h4>Career Objective</h4>
+                    <p>Expand into backend development and create scalable web applications.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Journey-END -->
-
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="contact-title">
-            <span>
-                GET IN TOUCH
-            </span>
-            <h2>
-                Let's Work Together
-            </h2>
-            <p>
-                Have a project idea or want to collaborate?
-                Feel free to reach out.
-            </p>
+            <span>GET IN TOUCH</span>
+            <h2>Let's Work Together</h2>
+            <p>Have a project idea or want to collaborate? Feel free to reach out.</p>
         </div>
         <div class="contact-container">
             <!-- LEFT -->
             <div class="contact-info">
                 <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-envelope">
-                        </i>
-                    </div>
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div>
-                        <h3>
-                            Email
-                        </h3>
-                        <p>
-                            domikipas@gmail.com
-                        </p>
+                        <h3>Email</h3>
+                        <p>domikipas@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-phone">
-                        </i>
-                    </div>
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                     <div>
-                        <h3>
-                            Phone
-                        </h3>
-                        <p>
-                            +91 85230 89576
-                        </p>
+                        <h3>Phone</h3>
+                        <p>+91 85230 89576</p>
                     </div>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-location-dot">
-                        </i>
-                    </div>
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div>
-                        <h3>
-                            Location
-                        </h3>
-                        <p>
-                            Visakhapatnam,
-                            India
-                        </p>
+                        <h3>Location</h3>
+                        <p>Visakhapatnam, India</p>
                     </div>
                 </div>
                 <div class="contact-social">
-                    <a href="https://github.com/MrQuipaca" target="_blank">
-                        <!-- Github -->
-                        <i class="fa-brands fa-github">
-                        </i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank">
-                        <!-- LinkedIn -->
-                        <i class="fa-brands fa-linkedin">
-                        </i>
-                    </a>
-                    <a href="https://www.instagram.com/mr.quipaca/" target="_blank">
-                        <!-- Instagram -->
-                        <i class="fa-brands fa-instagram">
-                        </i>
-                    </a>
-                    <a href="mailto:domikipas@gmail.com">
-                        <!-- Email -->
-                        <i class="fa-regular fa-envelope">
-                        </i>
-                    </a>
+                    <a href="https://github.com/MrQuipaca" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/mr.quipaca/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:domikipas@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                 </div>
             </div>
-
             <!-- RIGHT -->
             <div class="contact-form">
                 <form id="contact-form" method="post">
-                    <div class="input-box">
-                        <input type="text" placeholder="Your Name" name="name" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" placeholder="Your Email" name="email" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" placeholder="Subject" name="title" required>
-                    </div>
+                    <div class="input-box"><input type="text" placeholder="Your Name" name="name" required></div>
+                    <div class="input-box"><input type="email" placeholder="Your Email" name="email" required></div>
+                    <div class="input-box"><input type="text" placeholder="Subject" name="title" required></div>
                     <div class="input-box">
                         <textarea rows="6"
                             placeholder="Write your message (Please add your WhatsApp No. after your message!)"
                             name="message" required></textarea>
                     </div>
-                    <button type="submit" class="send-btn">
-                        Send Message
-                        <i class="fa-solid fa-paper-plane">
-                        </i>
-                    </button>
+                    <button type="submit" class="send-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
     </section>
-    <!-- Contact-END -->
 
-    <footer>
-        <p>
-          &copy; 2026 Domingos Quipaca. All Rights Reserved
-        </p>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span>DQ</span>
+                    Domingos Quipaca
+                </div>
+                <p>Junior Front-End Developer building responsive, modern and user-focused web experiences.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">Journey</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <a href="mailto:domikipas@gmail.com"><i class="fa-regular fa-envelope"></i> domikipas@gmail.com</a>
+                <a href="http://wa.me/918523089576" target="_blank"><i class="fa-brands fa-whatsapp"></i> +91 85230
+                    89576</a>
+                <div class="footer-social">
+                    <a href="https://github.com/MrQuipaca" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mrquipaca/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/mr.quipaca/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Domingos Quipaca. All Rights Reserved</p>
+            <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js">
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                menuToggle.classList.toggle('active', isOpen);
+                menuToggle.setAttribute('aria-expanded', isOpen);
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
     </script>
 </body>
 
