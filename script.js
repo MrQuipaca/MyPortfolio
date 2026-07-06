@@ -11,19 +11,19 @@ let deleting = false;
 
 const typing = document.getElementById("typing");
 
-function typeEffect(){
+function typeEffect() {
 
     const current = words[wordIndex];
 
-    if(!deleting){
+    if (!deleting) {
 
         typing.textContent =
-        current.substring(
-            0,
-            charIndex++
-        );
+            current.substring(
+                0,
+                charIndex++
+            );
 
-        if(charIndex > current.length){
+        if (charIndex > current.length) {
 
             deleting = true;
 
@@ -36,23 +36,23 @@ function typeEffect(){
         }
 
     }
-    else{
+    else {
 
         typing.textContent =
-        current.substring(
-            0,
-            charIndex--
-        );
+            current.substring(
+                0,
+                charIndex--
+            );
 
-        if(charIndex < 0){
+        if (charIndex < 0) {
 
             deleting = false;
 
             wordIndex++;
 
-            if(
+            if (
                 wordIndex >= words.length
-            ){
+            ) {
                 wordIndex = 0;
             }
 
@@ -73,72 +73,72 @@ typeEffect();
 
 // NAVBAR SCROLL EFFECT
 const nav =
-document.querySelector(
-"nav"
-);
+    document.querySelector(
+        "nav"
+    );
 
 window.addEventListener(
-"scroll",
-()=>{
+    "scroll",
+    () => {
 
-if(window.scrollY > 50){
+        if (window.scrollY > 50) {
 
-nav.style.background =
-"rgba(5,8,22,.92)";
+            nav.style.background =
+                "rgba(5,8,22,.92)";
 
-nav.style.boxShadow =
-"0 10px 35px rgba(0,0,0,.3)";
+            nav.style.boxShadow =
+                "0 10px 35px rgba(0,0,0,.3)";
 
-}
-else{
+        }
+        else {
 
-nav.style.background =
-"rgba(5,8,22,.35)";
+            nav.style.background =
+                "rgba(5,8,22,.35)";
 
-nav.style.boxShadow =
-"none";
+            nav.style.boxShadow =
+                "none";
 
-}
+        }
 
-});
+    });
 
 
 
 // REVEAL ANIMATION
 const observer =
-new IntersectionObserver(
+    new IntersectionObserver(
 
-(entries)=>{
+        (entries) => {
 
-entries.forEach(
+            entries.forEach(
 
-(entry)=>{
+                (entry) => {
 
-if(
-entry.isIntersecting
-){
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-entry.target.classList.add(
-"show"
-);
+                        entry.target.classList.add(
+                            "show"
+                        );
 
-}
+                    }
 
-}
+                }
 
-);
+            );
 
-},
+        },
 
-{
-threshold:.15
-}
+        {
+            threshold: .15
+        }
 
-);
+    );
 
 document.querySelectorAll(
 
-".hero-left,\
+    ".hero-left,\
 .hero-right,\
 .about-left,\
 .about-right,\
@@ -151,144 +151,144 @@ document.querySelectorAll(
 
 )
 
-.forEach(
+    .forEach(
 
-(el)=>{
+        (el) => {
 
-el.classList.add(
-"hidden"
-);
+            el.classList.add(
+                "hidden"
+            );
 
-observer.observe(el);
+            observer.observe(el);
 
-}
+        }
 
-);
+    );
 
 
 
 // ACTIVE NAV LINKS
 const sections =
-document.querySelectorAll(
-"section"
-);
+    document.querySelectorAll(
+        "section"
+    );
 
 const navLinks =
-document.querySelectorAll(
-".nav-links a"
-);
+    document.querySelectorAll(
+        ".nav-links a"
+    );
 
 window.addEventListener(
-"scroll",
-()=>{
+    "scroll",
+    () => {
 
-let current = "";
+        let current = "";
 
-sections.forEach(
+        sections.forEach(
 
-(section)=>{
+            (section) => {
 
-const top =
-section.offsetTop;
+                const top =
+                    section.offsetTop;
 
-if(
-window.scrollY >=
-top - 250
-){
+                if (
+                    window.scrollY >=
+                    top - 250
+                ) {
 
-current =
-section.getAttribute(
-"id"
-);
+                    current =
+                        section.getAttribute(
+                            "id"
+                        );
 
-}
+                }
 
-}
+            }
 
-);
+        );
 
-navLinks.forEach(
+        navLinks.forEach(
 
-(link)=>{
+            (link) => {
 
-link.classList.remove(
-"active"
-);
+                link.classList.remove(
+                    "active"
+                );
 
-if(
-link.href.includes(
-current
-)
-){
+                if (
+                    link.href.includes(
+                        current
+                    )
+                ) {
 
-link.classList.add(
-"active"
-);
+                    link.classList.add(
+                        "active"
+                    );
 
-}
+                }
 
-}
+            }
 
-);
+        );
 
-});
+    });
 
 
 
 // COUNTER ANIMATION
 const counters =
-document.querySelectorAll(
-".stat-card h3"
-);
+    document.querySelectorAll(
+        ".stat-card h3"
+    );
 
 counters.forEach(
 
-(counter)=>{
+    (counter) => {
 
-const original =
-counter.innerText;
+        const original =
+            counter.innerText;
 
-const target =
-parseInt(original);
+        const target =
+            parseInt(original);
 
-const suffix =
-original.includes("+")
-? "+"
-: "";
+        const suffix =
+            original.includes("+")
+                ? "+"
+                : "";
 
-let count = 0;
+        let count = 0;
 
-function update(){
+        function update() {
 
-const increment =
-target / 80;
+            const increment =
+                target / 80;
 
-if(count < target){
+            if (count < target) {
 
-count += increment;
+                count += increment;
 
-counter.innerText =
-Math.ceil(count)
-+ suffix;
+                counter.innerText =
+                    Math.ceil(count)
+                    + suffix;
 
-setTimeout(
-update,
-25
-);
+                setTimeout(
+                    update,
+                    25
+                );
 
-}
-else{
+            }
+            else {
 
-counter.innerText =
-target + suffix;
+                counter.innerText =
+                    target + suffix;
 
-}
+            }
 
-}
+        }
 
-update();
+        update();
 
-}
+    }
 
 );
 
@@ -296,166 +296,180 @@ update();
 
 // PROJECT CARD TILT
 document.querySelectorAll(
-".project-card"
+    ".project-card"
 )
 
-.forEach(
+    .forEach(
 
-(card)=>{
+        (card) => {
 
-card.addEventListener(
+            card.addEventListener(
 
-"mousemove",
+                "mousemove",
 
-(e)=>{
+                (e) => {
 
-const rect =
-card.getBoundingClientRect();
+                    const rect =
+                        card.getBoundingClientRect();
 
-const x =
-e.clientX -
-rect.left;
+                    const x =
+                        e.clientX -
+                        rect.left;
 
-const y =
-e.clientY -
-rect.top;
+                    const y =
+                        e.clientY -
+                        rect.top;
 
-card.style.transform =
+                    card.style.transform =
 
-`
+                        `
 perspective(1000px)
 
 rotateX(
-${(y-120)/18}deg
+${(y - 120) / 18}deg
 )
 
 rotateY(
-${-(x-150)/18}deg
+${-(x - 150) / 18}deg
 )
 
 scale(1.03)
 `;
 
-}
+                }
 
-);
+            );
 
-card.addEventListener(
+            card.addEventListener(
 
-"mouseleave",
+                "mouseleave",
 
-()=>{
+                () => {
 
-card.style.transform =
+                    card.style.transform =
 
-`
+                        `
 rotateX(0)
 rotateY(0)
 scale(1)
 `;
 
-}
+                }
 
-);
+            );
 
-}
+        }
 
-);
+    );
 
 
 
 // CONTACT FORM
 
-const form =
-document.querySelector(
-"form"
-);
+// const form =
+// document.querySelector(
+// "form"
+// );
 
-if(form){
+// if(form){
 
-form.addEventListener(
+// form.addEventListener(
 
-"submit",
+// "submit",
 
-(e)=>{
+// (e)=>{
 
-e.preventDefault();
+// e.preventDefault();
 
-alert(
-"Message sent successfully!"
-);
+// alert(
+// "Message sent successfully!"
+// );
 
-form.reset();
+// form.reset();
 
-}
+// }
 
-);
+// );
 
-}
+// }
+
+
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+      emailjs.sendForm("service_o2ootvh", "template_vrzo6nm", this)
+
+    // emailjs.send("service_o2ootvh", "template_vrzo6nm")
+    .then(function () {
+        alert("Message sent successfully!");
+    }, function (error) {
+        alert("Failed to send message: " + JSON.stringify(error));
+    });
+});
 
 
 
 // MOUSE GLOW
 const glow =
-document.createElement(
-"div"
-);
+    document.createElement(
+        "div"
+    );
 
 glow.className =
-"mouse-glow";
+    "mouse-glow";
 
 document.body.appendChild(
-glow
+    glow
 );
 
 document.addEventListener(
 
-"mousemove",
+    "mousemove",
 
-(e)=>{
+    (e) => {
 
-glow.style.left =
-e.clientX + "px";
+        glow.style.left =
+            e.clientX + "px";
 
-glow.style.top =
-e.clientY + "px";
+        glow.style.top =
+            e.clientY + "px";
 
-}
+    }
 
 );
 
 
 
 // FLOATING STARS
-for(
-let i=0;
-i<35;
-i++
-){
+for (
+    let i = 0;
+    i < 35;
+    i++
+) {
 
-const star =
-document.createElement(
-"span"
-);
+    const star =
+        document.createElement(
+            "span"
+        );
 
-star.classList.add(
-"star"
-);
+    star.classList.add(
+        "star"
+    );
 
-star.style.left =
-Math.random()*100
-+ "%";
+    star.style.left =
+        Math.random() * 100
+        + "%";
 
-star.style.top =
-Math.random()*100
-+ "%";
+    star.style.top =
+        Math.random() * 100
+        + "%";
 
-star.style.animationDelay =
-Math.random()*6
-+ "s";
+    star.style.animationDelay =
+        Math.random() * 6
+        + "s";
 
-document.body.appendChild(
-star);
+    document.body.appendChild(
+        star);
 
 }
 
@@ -465,63 +479,54 @@ star);
 // =========================
 
 const viewBtn =
-document.getElementById(
-"viewAllBtn"
-);
+    document.getElementById(
+        "viewAllBtn"
+    );
 
 const hiddenProjects =
-document.querySelectorAll(
-".extra-project"
-);
+    document.querySelectorAll(
+        ".extra-project"
+    );
 
 let expanded =
-false;
+    false;
 
 viewBtn.addEventListener(
 
-"click",
+    "click",
 
-()=>{
+    () => {
 
-expanded =
-!expanded;
+        expanded =
+            !expanded;
 
-hiddenProjects.forEach(
+        hiddenProjects.forEach(
 
-(project)=>{
+            (project) => {
 
-project.classList.toggle(
-"show-project"
-);
+                project.classList.toggle(
+                    "show-project"
+                );
 
-}
+            }
 
-);
+        );
 
-viewBtn.innerHTML =
+        viewBtn.innerHTML =
 
-expanded ?
+            expanded ?
 
-`Show Less
+                `Show Less
 <i class="fa-solid fa-arrow-up"></i>`
 
-:
+                :
 
-`View All
+                `View All
 <i class="fa-solid fa-arrow-right"></i>`;
 
-}
+    }
 
 );
 
-// Send Email
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
 
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-    .then(function() {
-      alert("Message sent successfully!");
-    }, function(error) {
-      alert("Failed to send message: " + JSON.stringify(error));
-    });
-});
+
