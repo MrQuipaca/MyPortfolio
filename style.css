@@ -797,6 +797,11 @@ nav {
     align-items: center;
 }
 
+.view-projects:hover{
+    cursor: pointer;    
+    background-color:rgba(255, 255, 255, 0.123);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
