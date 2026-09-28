@@ -4,7 +4,7 @@ A responsive personal portfolio site for a Junior Front-End Developer, built wit
 
 🔗 **Live demo:** _add your Netlify/Vercel link here_
 
-## ✨ Features
+## Features
 
 - **Animated hero section** — typing effect that cycles through job titles, floating profile circle, and a decorative code snippet card
 - **Glassmorphism UI** — frosted-glass cards throughout (about stats, skill cards, project cards, timeline, contact cards)
