@@ -107,13 +107,12 @@ stack: "HTML CSS JS",
             <!-- LEFT -->
             <div class="about-left" style="margin-top: -2rem" ;>
                 <p>
-                    Junior Front-End Developer with experience in HTML, CSS, JavaScript and responsive design.
-                    I enjoy creating modern, clean and user-friendly web experiences.
-                    Currently studying React and Node.js, with a future goal of becoming a Full-Stack Web Developer
-                    and AI Agent Builder.
+                    A Front-End Developer with experience in HTML5, CSS3, JavaScript (ES6), Bootstrap 5, SASS, and responsive web design. 
+                    Passionate about building modern, clean, and user-friendly web applications.                     
                 </p>
 
-                <p>I have a passion for building digital products that combine aesthetics and functionality.</p>
+                <p>Currently expanding my skills in PHP, Object-Oriented Programming (OOP), MySQL, jQuery, MVC architecture, REST APIs, and Git version control. 
+                    Dedicated to continuous learning and committed to becoming a Full-Stack Web Developer and AI Agent Builder, creating scalable, innovative, and intelligent digital solutions.</p>
                 <div class="about-info">
                     <div><i class="fa-solid fa-location-dot"></i> Visakhapatnam, Andhra Pradesh, India</div>
                     <div><i class="fa-regular fa-envelope"></i> domikipas@gmail.com</div>
@@ -250,16 +249,17 @@ stack: "HTML CSS JS",
     </section>
 
     <!-- PROJECTS -->
+     <!-- Block of Projects 1 -->
     <section class="projects" id="projects">
         <div class="projects-head">
             <div>
                 <span>MY WORK</span>
                 <h2>Featured Projects</h2>
             </div>
-            <button class="view-projects" id="viewAllBtn" >
-                View All <i class="fa-solid fa-arrow-right"></i>
-            </button>
+        
         </div>
+
+        <!-- PART 1 -->
         <div class="projects-grid" id="view">
             <!-- PROJECT 1 -->
                          <div class="project-card">
@@ -307,8 +307,8 @@ stack: "HTML CSS JS",
                 <div class="project-image">
                     <img src="image/translator.png" alt="face-bump">
                     <div class="overlay">
-                        <a href="https://news-city-bymrquipaca.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-                        <a href="https://github.com/MrQuipaca/News-City-" target="_blank"><i
+                        <a href="https://lang-translator-by-mr-quipaca2026.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
+                        <a href="https://github.com/MrQuipaca/Translator-App" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
@@ -336,7 +336,18 @@ stack: "HTML CSS JS",
                     <div class="tech-stack"><span>HTML</span><span>CSS</span></div>
                 </div>
             </div>
-            <!-- PROJECT 4 ENDED -->            
+            <!-- PROJECT 4 ENDED -->                                                         
+        </div>     
+        <!-- End - Block of Projects 1 -->
+
+                    <!-- Button To see all Projects -->
+            <button class="view-projects" id="viewAllBtn" style="margin: 12px;" >
+                View More <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        
+
+            <!-- Block of Projects 2 -->
+        <div class="projects-grid" id="view">        
                                             
             <!-- HIDDEN PROJECTS ONE -->
             <!-- PROJECT 1 -->
@@ -412,7 +423,7 @@ stack: "HTML CSS JS",
                     <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
                 </div>
             </div>
-            <!-- PROJECT 4 ENDED         -->       
+            <!-- PROJECT 4 ENDED         -->      
              
             
             <!-- EXTRA PROJECT -->
@@ -422,8 +433,8 @@ stack: "HTML CSS JS",
                 <div class="project-image">
                     <img src="image/facebump.jpeg" alt="face-bump">
                     <div class="overlay">
-                        <a href="https://news-city-bymrquipaca.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
-                        <a href="https://github.com/MrQuipaca/News-City-" target="_blank"><i
+                        <a href="https://facebumptbo.netlify.app/" target="_blank"><i class="fa-solid fa-eye"></i></a>
+                        <a href="https://github.com/MrQuipaca/FaceBomp-Game" target="_blank"><i
                                 class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
@@ -435,9 +446,10 @@ stack: "HTML CSS JS",
             </div> 
             
             <!-- END - HIDDEN PROJECTS - SECTION TWO -->           
-        </div>
+        </div>        
         <!-- PROJECTS END -->
-        </div>       
+        </div> 
+        <!-- End - Block of Projects 1 -->      
 
     </section>
 
@@ -635,27 +647,35 @@ stack: "HTML CSS JS",
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener('click', () => {
-                const isOpen = navLinks.classList.toggle('open');
-                menuToggle.classList.toggle('active', isOpen);
-                menuToggle.setAttribute('aria-expanded', isOpen);
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('menuToggle');
+    const mobileNavLinks = document.getElementById('navLinks');
+
+    if (mobileMenuToggle && mobileNavLinks) {
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isOpen = mobileNavLinks.classList.toggle('open');
+
+            mobileMenuToggle.classList.toggle('active', isOpen);
+            mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        mobileNavLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNavLinks.classList.remove('open');
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
             });
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('open');
-                    menuToggle.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                });
-            });
-        }
-    </script>
+        });
+    }
+</script>
+
+
 </body>
 
 </html>
