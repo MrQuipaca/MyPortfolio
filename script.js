@@ -1,7 +1,6 @@
 // TYPING EFFECT
 const words = [
-    "Front-End Developer",
-    "Web Developer",
+    "Freelance Web Developer & Digital Solutions Desiner",    
     "Creative Coder"
 ];
 let wordIndex = 0;
@@ -23,7 +22,7 @@ function typeEffect() {
                 1200
             );
             return;
-        }
+        } 
     }
     else {
         typing.textContent =
@@ -157,6 +156,28 @@ window.addEventListener(
         );
     });
 
+// MOBILE MENU TOGGLE
+const mobileMenuToggle = document.getElementById("menuToggle");
+const mobileNavLinks = document.getElementById("navLinks");
+
+if (mobileMenuToggle && mobileNavLinks) {
+    const closeMenu = () => {
+        mobileNavLinks.classList.remove("open");
+        mobileMenuToggle.classList.remove("active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    mobileMenuToggle.addEventListener("click", () => {
+        const isOpen = mobileNavLinks.classList.toggle("open");
+        mobileMenuToggle.classList.toggle("active", isOpen);
+        mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mobileNavLinks.querySelectorAll("a").forEach(
+        (link) => link.addEventListener("click", closeMenu)
+    );
+}
+
 // COUNTER ANIMATION
 const counters =
     document.querySelectorAll(
@@ -239,15 +260,35 @@ scale(1)
         }
     );
 
-// CONTACT FORM
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-      emailjs.sendForm("service_o2ootvh", "template_vrzo6nm", this)
-    // emailjs.send("service_o2ootvh", "template_vrzo6nm")
-    .then(function () {
-        alert("Message sent successfully!");
-    }, function (error) {
-        alert("Failed to send message: " + JSON.stringify(error));
+// CONTACT FORM -> WHATSAPP
+const WHATSAPP_NUMBER = "918523089576"; // country code + number, digits only
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const data = new FormData(contactForm);
+        const text =
+            `*New message from portfolio*\n\n` +
+            `*Name:* ${data.get("name").trim()}\n` +
+            `*Subject:* ${data.get("title").trim()}\n\n` +
+            `${data.get("message").trim()}`;
+
+        window.open(
+            `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
+            "_blank",
+            "noopener"
+        );
+        contactForm.reset();
+    });
+}
+
+// PRIVATE REPO NOTICE
+document.querySelectorAll(".private-repo").forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        alert("This is a private GitHub project. You need Mr. Quipaca's permission to see it.");
     });
 });
 
